@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Result</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    
+    <h1>Summited information</h1>
+    <h3>Name: {{ request.session.survey.first_name }} {{request.session.survey.last_name}}</h3>
+    <h3>Dojo Location: {{ request.session.survey.location }}</h3>
+    <h3>Favorite Language: {{ request.session.survey.language }}</h3>
+    <h3>Comment: {{ request.session.survey.comment }}</h3>
+    <br><br>
+    <h2>You have submitted this form {{request.session.num_submit}} time(s).</h2>
+</body>
+</html>
